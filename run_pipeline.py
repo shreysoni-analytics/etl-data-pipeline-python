@@ -11,12 +11,16 @@ def main() -> None:
     raw_df = extract_events(RAW_EVENTS_PATH)
 
     # Transform
-    clean_df = transform_events(raw_df)
+    if clean_df.empty:
+    raise ValueError("Transformed dataset is empty. Pipeline aborted.")
+
 
     # Load
     load_events(clean_df, OUTPUT_EVENTS_PATH)
 
-    print(f"✅ Pipeline complete. Output saved to: {OUTPUT_EVENTS_PATH}")
+    import logging
+logging.basicConfig(level=logging.INFO)
+logging.info(f"Pipeline complete. Output saved to: {OUTPUT_EVENTS_PATH}")
 
 if __name__ == "__main__":
     main()
