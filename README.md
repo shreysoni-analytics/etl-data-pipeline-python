@@ -13,10 +13,11 @@ A simple end-to-end ETL pipeline that demonstrates how raw data can be extracted
 - `etl/` – pipeline scripts (extract, transform, load)  
 - `run_pipeline.py` – runs the full pipeline end-to-end
 
+## Data Engineering Context
+This pipeline mirrors a simplified batch ETL workflow commonly used to prepare event-level data for downstream analytics, dashboards, and SQL-based product analysis.
+
 ## How to run
 ```bash
 pip install -r requirements.txt
 python run_pipeline.py
 
-## Data Engineering Context
-This pipeline mirrors a simplified batch ETL workflow commonly used to prepare event-level data for downstream analytics, dashboards, and SQL-based product analysis.
