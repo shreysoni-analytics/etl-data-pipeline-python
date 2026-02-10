@@ -5,7 +5,7 @@ A simple end-to-end ETL pipeline that demonstrates how raw data can be extracted
 ## What this pipeline does
 - **Extract** raw CSV files
 - **Transform** data using Pandas (cleaning, type fixes, derived columns)
-- **Load** clean outputs as CSV files in `/output/`
+- **Load** clean outputs as CSV files in data/output/
 
 ## Repo Structure
 - `data/raw/` – raw input CSV files  
